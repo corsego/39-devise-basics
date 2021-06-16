@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  devise_for :users
+  root 'home#homepage'
+  get 'homepage', to: 'home#homepage'
+  get 'dashboard', to: 'home#dashboard'
+
 end
